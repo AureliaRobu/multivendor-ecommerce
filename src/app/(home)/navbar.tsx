@@ -39,7 +39,7 @@ const navbarItems = [
 
 function Navbar() {
     const pathname = usePathname();
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     return (
         <nav className="h-20 flex justify-between border-b font-medium bg-white">
             <Link href="/" className="pl-6 flex items-center">
