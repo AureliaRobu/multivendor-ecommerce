@@ -6,7 +6,7 @@ import Link from "next/link";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {usePathname} from "next/navigation";
-import NavbarSidebar from "@/app/(home)/navbar-sidebar";
+import NavbarSidebar from "@/app/(app)/(home)/navbar-sidebar";
 import {MenuIcon} from "lucide-react";
 
 const poppins = Poppins({weight: '700', subsets: ['latin']});
@@ -42,7 +42,7 @@ function Navbar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     return (
         <nav className="h-20 flex justify-between border-b font-medium bg-white">
-            <Link href="/" className="pl-6 flex items-center">
+            <Link href="/public" className="pl-6 flex items-center">
                 <span className={cn('text-5xl font-semibold', poppins.className)}>funroad</span>
             </Link>
             <NavbarSidebar items={navbarItems} open={isSidebarOpen} onOpenChange={setIsSidebarOpen}/>
